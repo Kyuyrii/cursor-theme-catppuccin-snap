@@ -1,0 +1,91 @@
+name: cursor-theme-catppuccin
+build-base: core24
+base: bare
+version: '2.0.0'
+platforms:
+  all:
+    build-on: [amd64]
+    build-for: [all]
+summary: Catppuccin cursors
+description: |
+  A Snap that allows you to use Catppuccin cursors in Snap apps
+grade: stable
+confinement: strict
+
+slots:
+  icon-themes:
+    interface: content
+    source:
+      read:
+        - $SNAP/share/icons/catppuccin-frappe-blue-cursors
+        - $SNAP/share/icons/catppuccin-frappe-dark-cursors
+        - $SNAP/share/icons/catppuccin-frappe-flamingo-cursors
+        - $SNAP/share/icons/catppuccin-frappe-green-cursors
+        - $SNAP/share/icons/catppuccin-frappe-lavender-cursors
+        - $SNAP/share/icons/catppuccin-frappe-light-cursors
+        - $SNAP/share/icons/catppuccin-frappe-maroon-cursors
+        - $SNAP/share/icons/catppuccin-frappe-mauve-cursors
+        - $SNAP/share/icons/catppuccin-frappe-peach-cursors
+        - $SNAP/share/icons/catppuccin-frappe-pink-cursors
+        - $SNAP/share/icons/catppuccin-frappe-red-cursors
+        - $SNAP/share/icons/catppuccin-frappe-rosewater-cursors
+        - $SNAP/share/icons/catppuccin-frappe-sapphire-cursors
+        - $SNAP/share/icons/catppuccin-frappe-sky-cursors
+        - $SNAP/share/icons/catppuccin-frappe-teal-cursors
+        - $SNAP/share/icons/catppuccin-frappe-yellow-cursors
+        - $SNAP/share/icons/catppuccin-latte-blue-cursors
+        - $SNAP/share/icons/catppuccin-latte-dark-cursors
+        - $SNAP/share/icons/catppuccin-latte-flamingo-cursors
+        - $SNAP/share/icons/catppuccin-latte-green-cursors
+        - $SNAP/share/icons/catppuccin-latte-lavender-cursors
+        - $SNAP/share/icons/catppuccin-latte-light-cursors
+        - $SNAP/share/icons/catppuccin-latte-maroon-cursors
+        - $SNAP/share/icons/catppuccin-latte-mauve-cursors
+        - $SNAP/share/icons/catppuccin-latte-peach-cursors
+        - $SNAP/share/icons/catppuccin-latte-pink-cursors
+        - $SNAP/share/icons/catppuccin-latte-red-cursors
+        - $SNAP/share/icons/catppuccin-latte-rosewater-cursors
+        - $SNAP/share/icons/catppuccin-latte-sapphire-cursors
+        - $SNAP/share/icons/catppuccin-latte-sky-cursors
+        - $SNAP/share/icons/catppuccin-latte-teal-cursors
+        - $SNAP/share/icons/catppuccin-latte-yellow-cursors
+        - $SNAP/share/icons/catppuccin-macchiato-blue-cursors
+        - $SNAP/share/icons/catppuccin-macchiato-dark-cursors
+        - $SNAP/share/icons/catppuccin-macchiato-flamingo-cursors
+        - $SNAP/share/icons/catppuccin-macchiato-green-cursors
+        - $SNAP/share/icons/catppuccin-macchiato-lavender-cursors
+        - $SNAP/share/icons/catppuccin-macchiato-light-cursors
+        - $SNAP/share/icons/catppuccin-macchiato-maroon-cursors
+        - $SNAP/share/icons/catppuccin-macchiato-mauve-cursors
+        - $SNAP/share/icons/catppuccin-macchiato-peach-cursors
+        - $SNAP/share/icons/catppuccin-macchiato-pink-cursors
+        - $SNAP/share/icons/catppuccin-macchiato-red-cursors
+        - $SNAP/share/icons/catppuccin-macchiato-rosewater-cursors
+        - $SNAP/share/icons/catppuccin-macchiato-sapphire-cursors
+        - $SNAP/share/icons/catppuccin-macchiato-sky-cursors
+        - $SNAP/share/icons/catppuccin-macchiato-teal-cursors
+        - $SNAP/share/icons/catppuccin-macchiato-yellow-cursors
+        - $SNAP/share/icons/catppuccin-mocha-blue-cursors
+        - $SNAP/share/icons/catppuccin-mocha-dark-cursors
+        - $SNAP/share/icons/catppuccin-mocha-flamingo-cursors
+        - $SNAP/share/icons/catppuccin-mocha-green-cursors
+        - $SNAP/share/icons/catppuccin-mocha-lavender-cursors
+        - $SNAP/share/icons/catppuccin-mocha-light-cursors
+        - $SNAP/share/icons/catppuccin-mocha-maroon-cursors
+        - $SNAP/share/icons/catppuccin-mocha-mauve-cursors
+        - $SNAP/share/icons/catppuccin-mocha-peach-cursors
+        - $SNAP/share/icons/catppuccin-mocha-pink-cursors
+        - $SNAP/share/icons/catppuccin-mocha-red-cursors
+        - $SNAP/share/icons/catppuccin-mocha-rosewater-cursors
+        - $SNAP/share/icons/catppuccin-mocha-sapphire-cursors
+        - $SNAP/share/icons/catppuccin-mocha-sky-cursors
+        - $SNAP/share/icons/catppuccin-mocha-teal-cursors
+        - $SNAP/share/icons/catppuccin-mocha-yellow-cursors
+parts:
+  bibata-cursors:
+    plugin: dump
+    source: https://github.com/Kyuyrii/cursor-theme-catppuccin-snap/releases/download/v2.0.0/cursor-theme-catppuccin-snap-creation-files.deb
+    organize:
+      usr/share/icons: share/icons
+    prime:
+      - share/icons/
